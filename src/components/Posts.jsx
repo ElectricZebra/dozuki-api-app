@@ -19,7 +19,8 @@ function Posts({ setPostId }) {
               {data.map((post) => (
                 <p key={post.id}>
                   <a
-                    onClick={() => setPostId(post.id)}
+                    // look into implementing the set postId function         
+                    // onClick={() => setPostId(post.id)}
                     href="#"
                     style={
                       // We can access the query data here to show bold links for

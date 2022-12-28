@@ -10,7 +10,6 @@ const queryClient = new QueryClient();
 function App() {
   const [userId, setUserId] = useState(-1);
   const saveUserId = (selectedUserId) => {
-    console.log("in app selected user id = " + selectedUserId)
     setUserId(selectedUserId)
   } 
 
@@ -19,8 +18,9 @@ function App() {
       <div className="App">
         <h1>Hello World</h1>      
         <UsersDropdown userId={userId} onSelectedUser={saveUserId} />
+        {console.log("userid in app at time of render == " + userId )}
         {userId > -1 ? (
-          <User />
+          <User userId={userId} />
         ) : <></>}
         {/* <Posts /> */}
 
