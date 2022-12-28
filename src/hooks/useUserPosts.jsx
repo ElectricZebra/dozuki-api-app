@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 
-function useUserPosts(props) {
+function useUserPosts(userId) {
   return useQuery({
-    queryKey: ["post", props],
+    queryKey: ["post", userId],
     queryFn: () =>
-      fetch(`https://jsonplaceholder.typicode.com/posts?userId=${props}`).then((res) =>
+      fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`).then((res) =>
         res.json()
       ),
   });

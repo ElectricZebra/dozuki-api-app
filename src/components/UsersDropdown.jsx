@@ -13,7 +13,7 @@ function UsersDropdown(props) {
   const setUserHandler = (event) => {
     setSelectedUser(event.target.value)
     // ToDo figure out when refresh of selectedUser occurs
-    props.onSelectedUser(event.target.value)
+    props.saveUserId(event.target.value)
   };
 
   return (
@@ -26,7 +26,7 @@ function UsersDropdown(props) {
           <span>Error: {error.message}</span>
         ) : (
           <>
-            <select vaule={props.userId} onChange={setUserHandler}>
+            <select vaule={selectedUser} onChange={setUserHandler}>
               {data.map((user) => {
                 return (
                   <option

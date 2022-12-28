@@ -1,18 +1,20 @@
 import { useQueryClient } from "@tanstack/react-query";
+import { useState } from "react";
 import useUserPosts from "../hooks/useUserPosts";
 import Post from "./Post";
 
-const User = (props) => {
+const User = ({ userId, setPostId }) => {
   const queryClient = useQueryClient();
+  const { status, data, error, isFetching } = useUserPosts(userId);
 
-  const { status, data, error, isFetching } = useUserPosts(props.userId);
+  // const queryPostThing = queryClient.getQueryData(["user", 3])
+  // console.log("queryPostThing data === " + queryPostThing)
 
-  const queryPostThing = queryClient.getQueryData(["user", 3])
-  console.log("queryPostThing data === " + queryPostThing)
+
 
   return (
     <div>
-      <h1>User Id {props.userId} Posts</h1>
+      <h1>User Id {userId} Posts</h1>
       <div>
         {status === "loading" ? (
           "Loading..."
@@ -25,6 +27,7 @@ const User = (props) => {
                 <p key={post.id}>
                   <a
                     onClick={() => setPostId(post.id)}
+                    value={post.id}
                     href="#"
                     style={
                       // We can access the query data here to show bold links for
