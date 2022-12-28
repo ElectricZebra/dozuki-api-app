@@ -1,7 +1,20 @@
-import useUsers from "../hooks/useUsers"
+import { useState } from 'react';
+import useUsers from "../hooks/useUsers";
 
-function UsersDropdown() {
+
+function UsersDropdown(props) {
+  const [selectedUser, setSelectedUser] = useState(-1)
+  
   const { status, data, error, isFetching } = useUsers();
+
+
+
+  // send user id to parent component
+  const setUserHandler = (event) => {
+    setSelectedUser(event.target.value)
+    // ToDo figure out when refresh of selectedUser occurs
+    props.onSelectedUser(event.target.value)
+  };
 
   return (
     <div>
@@ -13,8 +26,17 @@ function UsersDropdown() {
           <span>Error: {error.message}</span>
         ) : (
           <>
-            <select>
-              {data.map(user => <option>{user.name}</option>)}
+            <select vaule={props.userId} onChange={setUserHandler}>
+              {data.map((user) => {
+                return (
+                  <option
+                    key={user.id}
+                    value={user.id}
+                  >
+                    {user.name}
+                  </option>
+                );
+              })}
             </select>
             <div>{isFetching ? "Background Updating..." : " "}</div>
           </>
