@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 1px;
   background-color: #FAFAFB;
-  margin: 10px 100px;
+  margin: 40px 100px;
   align-items: center;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
@@ -26,7 +26,7 @@
 }
 
 .page-back__container {
-  margin: 18px;
+  margin: 30px;
 }
 
 .page-back__button {

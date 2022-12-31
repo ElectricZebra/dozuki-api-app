@@ -3,7 +3,7 @@ import "./UsersDropdown.css";
 
 
 function UsersDropdown({saveUserId, setPostId}) {
-  const { status, data, error, isFetching } = useUsers();
+  const { status, data, error } = useUsers();
 
   const setUserHandler = (event) => {
     setPostId(-1);
@@ -30,7 +30,6 @@ function UsersDropdown({saveUserId, setPostId}) {
                 );
               })}
             </select>
-            <div>{isFetching ? "Background Updating..." : " "}</div>
           </>
         )}
       </div>

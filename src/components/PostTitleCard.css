@@ -1,13 +1,9 @@
 .cached-post {
-  background-color: lightblue;
-  text-decoration: none;
-  text-transform: capitalize;
+  
 }
 
 .uncached-post {
-  text-decoration: none;
-  text-transform: capitalize;
-  /* font-weight: bold; */
+  
 }
 
 .post-title-card-container {
@@ -16,18 +12,21 @@
   justify-content: space-between;
   padding: 20px 30px;
   background-color: #FAFAFB;
-  margin-bottom: 17px;
+  margin: 10px;
   align-items: center;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
   border-bottom: 0.4rem solid #f34e46;
   width: 150px;
   height: 250px;
+  color: #1B253C;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 a.post-title-card-container:hover, a.post-title-card-container:active {
   background-color: #1B253C;
   color: #FAFAFB;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 

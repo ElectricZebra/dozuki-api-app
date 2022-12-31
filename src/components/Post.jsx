@@ -17,7 +17,7 @@ const Post = ({ postId, setPostId }) => {
           <div>
             <p><b>Post Body:</b> {data.body}</p>
           </div>
-          <div>{isFetching ? "Background Updating..." : " "}</div>
+          {/* <div>{isFetching ? "Background Updating..." : " "}</div> */}
         </>
       )}
       <div className="page-back__container">

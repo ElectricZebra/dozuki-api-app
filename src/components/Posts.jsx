@@ -1,10 +1,14 @@
+import { useQueryClient } from "@tanstack/react-query";
+
 import PostTitleCard from "./PostTitleCard";
 import "./Posts.css";
 
 import usePosts from "../hooks/usePosts"
 
 function Posts({ setPostId }) {
-  const { status, data, error, isFetching } = usePosts();
+  // const queryClient = useQueryClient();
+  // const posts = queryClient.getQueryData(["posts"]);
+  const { status, data, error } = usePosts();
 
   return (
     <div>
@@ -21,7 +25,6 @@ function Posts({ setPostId }) {
                 <PostTitleCard key={post.id} setPostId={setPostId} post={post} />
               ))}
             </div>
-            <div>{isFetching ? "Background Updating..." : " "}</div>
           </>
         )}
       </div>
