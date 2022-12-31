@@ -4,23 +4,18 @@ import "./PostTitleCard.css";
 
 const PostTitleCard = ({setPostId, post}) => {
   const queryClient = useQueryClient();
+  
   return (      
-    <p>
-      <a
+    <a className="post-title-card-container">
+      <div
         onClick={() => setPostId(post.id)}
         value={post.id}
         href="#"
-        className={
-          // We can access the query data here to show bold links for
-          // ones that are cached
-          queryClient.getQueryData(["post", post.id])
-            ? "cached-post-data"
-            : ""
-        }
+        className={ queryClient.getQueryData(["post", post.id]) ? "cached-post" : "uncached-post" }
       >
         {post.title}
-      </a>
-    </p>
+      </div>
+    </a>
   )
 }
 

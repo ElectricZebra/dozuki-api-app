@@ -70,5 +70,5 @@ button:focus-visible {
 } */
 body {
   font-family: 'Public Sans', sans-serif;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
