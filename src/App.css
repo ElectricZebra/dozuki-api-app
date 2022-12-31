@@ -2,13 +2,22 @@ body {
   background-color: #FAFAFB;
 }
 
-.header-name {
+/* .header-name {
   color: #F34E46;
   font-family: sans-serif;
   text-align: center;
-}
+} */
 
 .nav-bar {
   display: flex;
   justify-content: space-evenly;
+}
+
+.dozuki-logo {
+  width: 180px;
+}
+
+.test {
+  background: yellow;
+  font-family: 'Public Sans', sans-serif;
 }

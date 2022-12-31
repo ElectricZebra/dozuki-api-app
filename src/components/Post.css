@@ -15,9 +15,60 @@
   flex-direction: column;
   color: #1C253D;
   font-family: sans-serif;
+  text-transform: capitalize;
 }
 
 .post-content {
   color: #1C253D;
   font-family: sans-serif;
+}
+
+.page-back__container {
+  margin: 18px;
+}
+
+.page-back__button {
+  /* background-color: transparent;
+  background-color: #fff;
+  border: 2rem solid #efca08;
+  border-radius: 30rem;
+  color: #242c33;
+  cursor: pointer;
+  display: inline-block;
+  font-family: PublicSans;
+  font-size: 18rem;
+  font-size: 16rem;
+  font-weight: 900;
+  letter-spacing: 1.12rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 17rem 50rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .1s ease-in;
+  white-space: nowrap; */
+
+  border: 2px solid #efca08;
+  border-radius: 30px;
+  color: #242c33;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+a.page-back__button:link, a.page-back__button:visited {
+  border: 2px solid #efca08;
+  border-radius: 30px;
+  color: #242c33;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+a.page-back__button:hover, a.page-back__button:active {
+  border: 2px solid #242c33;
+  border-radius: 30px;
+  background-color: #242c33;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #efca08;
 }

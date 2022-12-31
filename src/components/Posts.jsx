@@ -7,7 +7,7 @@ function Posts({ setPostId }) {
 
   return (
     <div>
-      <h1>Posts</h1>
+      <h1>All Posts</h1>
       <div>
         {status === "loading" ? (
           "Loading..."
@@ -20,7 +20,7 @@ function Posts({ setPostId }) {
                 <p key={post.id}>
                   <a
                     // look into implementing the set postId function         
-                    // onClick={() => setPostId(post.id)}
+                    onClick={() => setPostId(post.id)}
                     href="#"
                     style={
                       // We can access the query data here to show bold links for

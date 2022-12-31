@@ -18,11 +18,18 @@ function App() {
   // const queryPostThing = queryClient.getQueryData(["users"])
   // console.log("queryPostThing data === " + queryPostThing)
 
+  const returnHomeHandler = () => {
+    setPostId(-1);
+    setUserId(-1);
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <div className="nav-bar">
-          <h1 className="header-name">DOZUKI</h1>      
+          <a href="" onClick={returnHomeHandler}>
+            <img className="dozuki-logo" src="https://www.dozuki.com/hubfs/NB%202022/Logos/Dozuki-Logo.svg" alt="Dozuki Logo"></img>
+          </a>
           <UsersDropdown saveUserId={setUserId} setPostId={setPostId} />
         </div>
         {userId > -1 && postId == -1 ? (
@@ -30,6 +37,9 @@ function App() {
         ) : <></> }
         {postId > -1 ? (
           <Post postId={postId} setPostId={setPostId} />
+        ) : <></>}
+        {userId == -1 && postId == -1 ? (
+          <Posts setPostId={setPostId} />
         ) : <></>}
 
 
