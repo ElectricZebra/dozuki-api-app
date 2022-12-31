@@ -1,7 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 
 import useUserPosts from "../hooks/useUserPosts";
-import Post from "./Post";
+import PostTitleCard from "./PostTitleCard";
 import "./UserPosts.css";
 
 const User = ({ userId, setPostId }) => {
@@ -11,9 +11,6 @@ const User = ({ userId, setPostId }) => {
   
   const users = queryClient.getQueryData(["users"]);
   const [user] = users ? users.filter(user => user.id == userId) : [{}];
-
-
-
 
   return (
     <div className="user-posts">
@@ -28,27 +25,7 @@ const User = ({ userId, setPostId }) => {
             <>
               <div>
                 {data.map((post) => (
-                  <p key={post.id}>
-                    
-                    <a
-                      onClick={() => setPostId(post.id)}
-                      value={post.id}
-                      href="#"
-                      style={
-                        // We can access the query data here to show bold links for
-                        // ones that are cached
-                        queryClient.getQueryData(["post", post.id])
-                          ? {
-                              fontWeight: "bold",
-                              color: "green",
-                            }
-                          : {}
-                      }
-                    >
-                      {/* capitalize title */}
-                      {post.title.charAt(0).toUpperCase() + post.title.slice(1)}
-                    </a>
-                  </p>
+                  <PostTitleCard key={post.id} setPostId={setPostId} post={post} />
                 ))}
               </div>
               <div>{isFetching ? "Background Updating..." : " "}</div>
