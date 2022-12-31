@@ -33,6 +33,7 @@ function Posts({ setPostId }) {
                         : {}
                     }
                   >
+                    {/* {console.log("in posts queryClent == " + queryClient.getQueryData(["post", post.id]))} */}
                     {post.title}
                   </a>
                 </p>

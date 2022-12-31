@@ -1,0 +1,23 @@
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1px;
+  background-color: #FAFAFB;
+  margin: 10px 100px;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-bottom: 0.4rem solid #f34e46;
+}
+
+.post-title {
+  flex-direction: column;
+  color: #1C253D;
+  font-family: sans-serif;
+}
+
+.post-content {
+  color: #1C253D;
+  font-family: sans-serif;
+}

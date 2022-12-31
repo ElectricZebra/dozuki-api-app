@@ -1,8 +1,10 @@
 import { useState } from 'react';
+
 import useUsers from "../hooks/useUsers";
+import "./UsersDropdown.css";
 
 
-function UsersDropdown(props) {
+function UsersDropdown({saveUserId, setPostId}) {
   const [selectedUser, setSelectedUser] = useState(-1)
   
   const { status, data, error, isFetching } = useUsers();
@@ -11,14 +13,15 @@ function UsersDropdown(props) {
 
   // send user id to parent component
   const setUserHandler = (event) => {
-    setSelectedUser(event.target.value)
+    setSelectedUser(event.target.value);
+    setPostId(-1);
     // ToDo figure out when refresh of selectedUser occurs
-    props.saveUserId(event.target.value)
+    saveUserId(event.target.value)
   };
 
   return (
-    <div>
-      <h1>Users</h1>
+    <div className="user-select">
+      <h1>Select A User</h1>
       <div>
         {status === "loading" ? (
           "Loading..."
@@ -26,7 +29,7 @@ function UsersDropdown(props) {
           <span>Error: {error.message}</span>
         ) : (
           <>
-            <select vaule={selectedUser} onChange={setUserHandler}>
+            <select className="users-dropdown" onChange={setUserHandler} >
               {data.map((user) => {
                 return (
                   <option
