@@ -1,5 +1,4 @@
 .cached-post {
-  font-weight: bold;
   background-color: lightblue;
   text-decoration: none;
   text-transform: capitalize;
@@ -8,6 +7,7 @@
 .uncached-post {
   text-decoration: none;
   text-transform: capitalize;
+  /* font-weight: bold; */
 }
 
 .post-title-card-container {
@@ -21,6 +21,8 @@
   border-radius: 6px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
   border-bottom: 0.4rem solid #f34e46;
+  width: 150px;
+  height: 250px;
 }
 
 a.post-title-card-container:hover, a.post-title-card-container:active {

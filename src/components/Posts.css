@@ -1,0 +1,15 @@
+
+/* Todo make this styling its own component and use for both UserPosts and Posts */
+/* applied to both Posts and UserPosts */
+.post-title-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.post-title-cards__container {
+  display: flex;
+  justify-content: center;
+}

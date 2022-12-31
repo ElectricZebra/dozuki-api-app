@@ -13,7 +13,8 @@ const PostTitleCard = ({setPostId, post}) => {
         href="#"
         className={ queryClient.getQueryData(["post", post.id]) ? "cached-post" : "uncached-post" }
       >
-        {post.title}
+        <h3>{post.title}</h3>
+        {/* <p>{post.body.substring(0, 50)}</p> */}
       </div>
     </a>
   )

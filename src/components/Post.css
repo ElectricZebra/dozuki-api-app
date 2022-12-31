@@ -16,6 +16,8 @@
   color: #1C253D;
   font-family: sans-serif;
   text-transform: capitalize;
+  font-weight: bold;
+  margin: 14px;
 }
 
 .post-content {

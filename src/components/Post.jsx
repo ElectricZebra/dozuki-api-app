@@ -2,7 +2,6 @@ import usePost from "../hooks/usePost";
 import "./Post.css";
 
 const Post = ({ postId, setPostId }) => {
-  // console.log("post id == " + postId)
   const { status, data, error, isFetching } = usePost(postId);
   
 
@@ -16,7 +15,7 @@ const Post = ({ postId, setPostId }) => {
         <>
           <div className="post-title">Post Title: {data.title}</div>
           <div>
-            <p>Post Body: {data.body}</p>
+            <p><b>Post Body:</b> {data.body}</p>
           </div>
           <div>{isFetching ? "Background Updating..." : " "}</div>
         </>
