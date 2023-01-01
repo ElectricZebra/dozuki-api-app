@@ -26,22 +26,26 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
-        <div className="nav-bar">
-          <a href="" onClick={returnHomeHandler}>
-            <img className="dozuki-logo" src="https://www.dozuki.com/hubfs/NB%202022/Logos/Dozuki-Logo.svg" alt="Dozuki Logo"></img>
-          </a>
-          <UsersDropdown saveUserId={setUserId} setPostId={setPostId} />
+        <div className="sticky-header">
+          <div className="banner">Temp Banner X</div>
+          <div className="nav-bar">
+            <a href="" onClick={returnHomeHandler}>
+              <img className="dozuki-logo" src="https://www.dozuki.com/hubfs/NB%202022/Logos/Dozuki-Logo.svg" alt="Dozuki Logo"></img>
+            </a>
+            <UsersDropdown saveUserId={setUserId} setPostId={setPostId} />
+          </div>
         </div>
-        {userId > -1 && postId == -1 ? (
-          <UserPosts userId={userId} setPostId={setPostId} />
-        ) : <></> }
-        {postId > -1 ? (
-          <Post postId={postId} setPostId={setPostId} />
-        ) : <></>}
-        {userId == -1 && postId == -1 ? (
-          <Posts setPostId={setPostId} />
-        ) : <></>}
-
+        <div className="main">
+          {userId > -1 && postId == -1 ? (
+            <UserPosts userId={userId} setPostId={setPostId} />
+          ) : <></> }
+          {postId > -1 ? (
+            <Post postId={postId} setPostId={setPostId} />
+          ) : <></>}
+          {userId == -1 && postId == -1 ? (
+            <Posts setPostId={setPostId} />
+          ) : <></>}
+        </div>
 
       </div>
       <ReactQueryDevtools initialIsOpen={false} />

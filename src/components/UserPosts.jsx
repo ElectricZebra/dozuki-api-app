@@ -14,7 +14,7 @@ const User = ({ userId, setPostId }) => {
 
   return (
     <div>
-      <h1>Posts by: {user.name}</h1>
+      <h1 className="section-header">Posts by: {user.name}</h1>
       <div className="post-title-cards__container">
         {status === "loading" ? (
           "Loading..."

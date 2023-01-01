@@ -12,7 +12,7 @@ function Posts({ setPostId }) {
 
   return (
     <div>
-      <h1>All Posts</h1>
+      <h1 className="section-header">All Posts</h1>
       <div className="post-title-cards__container">
         {status === "loading" ? (
           "Loading..."
