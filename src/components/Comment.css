@@ -1,0 +1,12 @@
+.comment {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 6px;
+  background-color: #FAFAFB;
+  align-items: center;
+  color: #1B253C;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 10px
+}

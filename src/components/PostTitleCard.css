@@ -6,22 +6,16 @@
   
 }
 
-.post-title-card-container {
+.post-title__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 30px;
-  background-color: #FAFAFB;
-  margin: 10px;
-  align-items: center;
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
-  border-bottom: 0.4rem solid #f34e46;
-  width: 150px;
-  height: 250px;
+  background-color: #FAFAFB;
+  align-items: center;
   color: #1B253C;
   text-decoration: none;
-  text-transform: capitalize;
+  margin: 10px;
 }
 
 a.post-title-card-container:hover, a.post-title-card-container:active {

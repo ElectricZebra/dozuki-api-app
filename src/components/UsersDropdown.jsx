@@ -19,17 +19,19 @@ function UsersDropdown({saveUserId, setPostId}) {
           <span>Error: {error.message}</span>
         ) : (
           <>
-            <label for="users">Select A User</label>
-            <select name="users" className="users-dropdown" onChange={setUserHandler} >
-              <option value="-1">--Please select a user--</option>
-              {data.map((user) => {
-                return (
-                  <option key={user.id} value={user.id} >
-                    {user.name}
-                  </option>
-                );
-              })}
-            </select>
+            <label>
+              Select A User
+              <select name="users" className="users-dropdown" onChange={setUserHandler} >
+                <option value="-1">--Please select a user--</option>
+                {data.map((user) => {
+                  return (
+                    <option key={user.id} value={user.id} >
+                      {user.name}
+                    </option>
+                  );
+                })}
+              </select>
+            </label>
           </>
         )}
       </div>

@@ -71,4 +71,8 @@ button:focus-visible {
 body {
   font-family: 'Public Sans', sans-serif;
   /* font-weight: bold; */
+  background-image: url("https://www.dozuki.com/hs-fs/hubfs/NB%202022/Images/hero-bg-image.png?length=1920&name=hero-bg-image.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }

@@ -1,5 +1,6 @@
 import { useQueryClient } from "@tanstack/react-query";
 
+import Card from "./UI/Card";
 import "./PostTitleCard.css";
 
 const PostTitleCard = ({ setPostId, post }) => {
@@ -7,12 +8,12 @@ const PostTitleCard = ({ setPostId, post }) => {
 
   return (
     <a
-      className="post-title-card-container"
+      className="post-title__container"
       onClick={() => setPostId(post.id)}
       value={post.id}
       href="#"
     >
-      <div
+      <Card
         className={
           queryClient.getQueryData(["post", post.id])
             ? "cached-post"
@@ -21,7 +22,7 @@ const PostTitleCard = ({ setPostId, post }) => {
       >
         <h3>{post.title}</h3>
         {/* <p>{post.body.substring(0, 50)}</p> */}
-      </div>
+      </Card>
     </a>
   );
 };

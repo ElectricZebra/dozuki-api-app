@@ -53,3 +53,8 @@ a.page-back__button:hover, a.page-back__button:active {
   text-decoration: none;
   color: #efca08;
 }
+
+.react-icons {
+  vertical-align: middle;
+  padding-bottom: 4px;
+}
