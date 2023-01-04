@@ -18,7 +18,7 @@
   margin: 10px;
 }
 
-a.post-title-card-container:hover, a.post-title-card-container:active {
+a.post-title__container:hover, a.post-title__container:active {
   background-color: #1B253C;
   color: #FAFAFB;
   /* cursor: pointer; */

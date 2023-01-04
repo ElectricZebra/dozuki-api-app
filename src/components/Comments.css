@@ -1,3 +1,9 @@
-.comments__container {
+.comments__container  {
   display: flex;
+  justify-content: center;
 }
+
+.comments__list {
+  width: 80%;
+}
+

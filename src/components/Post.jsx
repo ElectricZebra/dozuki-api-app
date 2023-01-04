@@ -33,16 +33,6 @@ const Post = ({ postId, setPostId }) => {
           Back
         </a>
       </div>
-      {/* <div className="page-back__container">
-        <a className="page-back_button"
-        // onClick={() => setPostId(-1)} 
-        href="#">
-          <AiFillCaretLeft className="react-icons" />
-          Comments
-          <Comments /> 
-        </a>
-      </div> */}
-
     </div>
   );
 }

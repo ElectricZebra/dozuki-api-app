@@ -7,14 +7,14 @@ const Comments = ({ postId }) => {
   const { status, data, error, isFetching } = useComments(postId);
 
   return (
-    <div>
+    <div className="comments__container">
       {!postId || status === "loading" ? (
         "Loading..."
       ) : status === "error" ? (
         <span>Error: {error.message}</span>
       ) : (
-        <div className="comments__container">
-          Comments: 
+        <div className="comments__list">
+          <h4>Comments: </h4>
           {data.map(comment => {
             return <Comment key={comment.id} comment={comment} />
           })}
