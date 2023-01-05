@@ -1,9 +1,10 @@
 import { useQueryClient } from "@tanstack/react-query";
 
 import PostTitleCard from "./PostTitleCard";
+import usePosts from "../../hooks/usePosts"
+
 import "./Posts.css";
 
-import usePosts from "../hooks/usePosts"
 
 function Posts({ setPostId }) {
   // const queryClient = useQueryClient();

@@ -1,11 +1,25 @@
 import App from './App'
 import { render, screen, userEvent } from './utils/test-utils'
 
-describe('Simple working test', () => {
-  it('the title is visible', () => {
-    render(<App />)
-    expect(screen.getByText(/Temp Banner X/i)).toBeInTheDocument()
-  })
+test('renders Temp Banner', () => {
+  
+  // Arrange
+  render(<App />);
+
+  // Act 
+  // ...nothing
+
+  // Assert
+  const tempBanner = screen.getByText('Temp Banner X');
+  expect(tempBanner).toBeInTheDocument();
+})
+
+
+// describe('Simple working test', () => {
+//   it('the title is visible', () => {
+//     render(<App />)
+//     expect(screen.getByText(/Temp Banner X/i)).toBeInTheDocument()
+//   })
 
   // it('should increment count on click', async () => {
   //   render(<App />)
@@ -19,4 +33,4 @@ describe('Simple working test', () => {
   //   expect(element.className).toEqual('App-header')
   //   expect(getComputedStyle(element).display).toEqual('flex')
   // })
-})
+// })

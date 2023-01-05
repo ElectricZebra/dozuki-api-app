@@ -1,7 +1,7 @@
 import { AiFillCaretLeft } from 'react-icons/ai';
 
-import usePost from "../hooks/usePost";
-import Comments from './Comments';
+import Comments from './Comments/Comments';
+import usePost from "../../hooks/usePost";
 
 import "./Post.css";
 

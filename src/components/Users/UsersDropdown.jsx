@@ -1,6 +1,6 @@
-import useUsers from "../hooks/useUsers";
-import "./UsersDropdown.css";
+import useUsers from "../../hooks/useUsers";
 
+import "./UsersDropdown.css";
 
 function UsersDropdown({saveUserId, setPostId}) {
   const { status, data, error } = useUsers();

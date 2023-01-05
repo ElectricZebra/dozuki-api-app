@@ -1,5 +1,5 @@
 import Comment from "./Comment";
-import useComments from "../hooks/useComments";
+import useComments from "../../../hooks/useComments";
 
 import "./Comments.css";
 

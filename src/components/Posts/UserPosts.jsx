@@ -1,6 +1,6 @@
 import { useQueryClient } from "@tanstack/react-query";
 
-import useUserPosts from "../hooks/useUserPosts";
+import useUserPosts from "../../hooks/useUserPosts";
 import PostTitleCard from "./PostTitleCard";
 import "./Posts.css";
 

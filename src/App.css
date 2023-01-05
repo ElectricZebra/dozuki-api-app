@@ -11,9 +11,9 @@ body {
 .nav-bar {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 10px;
   background-color: #FAFAFB;
-  padding: 13px;
+  padding: 13px 0px 35px;
+  box-shadow: 0px 5px 10px 2px rgb(0 0 0 / 20%);
 }
 
 .dozuki-logo {
@@ -46,5 +46,5 @@ body {
 }
 
 .main {
-  padding-top: 100px;
+  padding-top: 135px;
 }

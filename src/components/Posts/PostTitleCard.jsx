@@ -1,6 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 
-import Card from "./UI/Card";
+import Card from "../UI/Card";
+
 import "./PostTitleCard.css";
 
 const PostTitleCard = ({ setPostId, post }) => {
