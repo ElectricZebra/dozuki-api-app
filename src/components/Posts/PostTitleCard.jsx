@@ -1,12 +1,8 @@
-import { useQueryClient } from "@tanstack/react-query";
-
 import Card from "../UI/Card";
 
 import "./PostTitleCard.css";
 
 const PostTitleCard = ({ setPostId, post }) => {
-  const queryClient = useQueryClient();
-
   return (
     <a
       className="post-title__container"
@@ -14,15 +10,8 @@ const PostTitleCard = ({ setPostId, post }) => {
       value={post.id}
       href="#"
     >
-      <Card
-        className={
-          queryClient.getQueryData(["post", post.id])
-            ? "cached-post"
-            : "uncached-post"
-        }
-      >
+      <Card>
         <h3>{post.title}</h3>
-        {/* <p>{post.body.substring(0, 50)}</p> */}
       </Card>
     </a>
   );

@@ -27,7 +27,6 @@ const User = ({ userId, setPostId }) => {
                 <PostTitleCard key={post.id} setPostId={setPostId} post={post} />
               ))}
             </div>
-            <div>{isFetching ? "Background Updating..." : " "}</div>
           </>
         )}
       </div>

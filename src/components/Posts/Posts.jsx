@@ -13,7 +13,11 @@ function Posts({ setPostId }) {
 
   return (
     <div>
-      <h1 className="section-header">All Posts</h1>
+      <div className="section-header">
+        <h1 >All Posts</h1>
+        <div className="post-count">Count: {data.length}</div>
+      </div>
+      
       <div className="post-title-cards__container">
         {status === "loading" ? (
           "Loading..."

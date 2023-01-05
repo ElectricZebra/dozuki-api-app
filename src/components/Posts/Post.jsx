@@ -1,13 +1,13 @@
-import { AiFillCaretLeft } from 'react-icons/ai';
+import { AiFillCaretLeft } from "react-icons/ai";
 
-import Comments from './Comments/Comments';
+import User from "../Users/User";
+import Comments from "./Comments/Comments";
 import usePost from "../../hooks/usePost";
 
 import "./Post.css";
 
 const Post = ({ postId, setPostId }) => {
   const { status, data, error, isFetching } = usePost(postId);
-  
 
   return (
     <div className="post-container">
@@ -18,24 +18,23 @@ const Post = ({ postId, setPostId }) => {
       ) : (
         <>
           <div className="post-title">Post Title: {data.title}</div>
+          <User userId={data.userId} />
           <div>
-            <p><b>Post Body:</b> {data.body}</p>
+            <p>
+              <b>Post Body:</b> {data.body}
+            </p>
           </div>
           <Comments postId={postId} />
-          {/* <div>{isFetching ? "Background Updating..." : " "}</div> */}
         </>
       )}
       <div className="page-back__container">
-        <a className="page-back__button"
-        onClick={() => setPostId(-1)} 
-        href="#">
+        <a className="page-back__button" onClick={() => setPostId(-1)} href="#">
           <AiFillCaretLeft className="react-icons" />
           Back
         </a>
       </div>
     </div>
   );
-}
-
+};
 
 export default Post;
