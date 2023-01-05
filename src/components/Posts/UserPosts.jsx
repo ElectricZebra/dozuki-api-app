@@ -1,7 +1,9 @@
 import { useQueryClient } from "@tanstack/react-query";
 
-import useUserPosts from "../../hooks/useUserPosts";
+import PostsLayout from "../UI/PostsLayout";
 import PostTitleCard from "./PostTitleCard";
+import useUserPosts from "../../hooks/useUserPosts";
+
 import "./Posts.css";
 
 const User = ({ userId, setPostId }) => {
@@ -15,21 +17,19 @@ const User = ({ userId, setPostId }) => {
   return (
     <div>
       <h1 className="section-header">Posts by: {user.name}</h1>
-      <div className="post-title-cards__container">
+      <PostsLayout className="post-title-cards__container">
         {status === "loading" ? (
           "Loading..."
         ) : status === "error" ? (
           <span>Error: {error.message}</span>
         ) : (
           <>
-            <div className="post-title-cards">
-              {data.map((post) => (
-                <PostTitleCard key={post.id} setPostId={setPostId} post={post} />
-              ))}
-            </div>
+            {data.map((post) => (
+              <PostTitleCard key={post.id} setPostId={setPostId} post={post} />
+            ))}
           </>
         )}
-      </div>
+      </PostsLayout>
     </div>
   );
 }

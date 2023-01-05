@@ -1,0 +1,11 @@
+.posts__container {
+  display: flex;
+  justify-content: center;
+}
+
+.posts-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+}
