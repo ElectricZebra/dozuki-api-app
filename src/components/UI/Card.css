@@ -6,4 +6,7 @@
   height: 250px;
   padding: 20px 30px;
   text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
