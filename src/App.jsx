@@ -24,7 +24,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <div className="sticky-header">
-          <div className="banner">Nick Regoli Demo App</div>
+          <div className="banner">JSON Placeholder Demo App - Nick Regoli</div>
           <div className="nav-bar">
             <a href="" onClick={returnHomeHandler}>
               <img className="dozuki-logo" src="https://www.dozuki.com/hubfs/NB%202022/Logos/Dozuki-Logo.svg" alt="Dozuki Logo"></img>

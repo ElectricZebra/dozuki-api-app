@@ -1,11 +1,3 @@
-.cached-post {
-  
-}
-
-.uncached-post {
-  
-}
-
 .post-title__container {
   display: flex;
   flex-direction: column;
@@ -21,6 +13,5 @@
 a.post-title__container:hover, a.post-title__container:active {
   background-color: #1B253C;
   color: #FAFAFB;
-  /* cursor: pointer; */
 }
 

@@ -8,15 +8,18 @@ import "./Posts.css";
 
 const User = ({ userId, setPostId }) => {
   const queryClient = useQueryClient();
-  const { status, data, error, isFetching } = useUserPosts(userId);
+  const { status, data, error } = useUserPosts(userId);
 
   
   const users = queryClient.getQueryData(["users"]);
   const [user] = users ? users.filter(user => user.id == userId) : [{}];
 
+  console.log("userId == " + userId)
+  console.log("users == " + users)
+
   return (
     <div>
-      <h1 className="section-header">Posts by: {user.name}</h1>
+      <h1 className="section-header">Posts by: {user.name} - {data && data.length}</h1>
       <PostsLayout className="post-title-cards__container">
         {status === "loading" ? (
           "Loading..."

@@ -1,36 +1,20 @@
 import App from './App'
-import { render, screen, userEvent } from './utils/test-utils'
+import { render, screen } from './utils/test-utils'
 
-test('renders Temp Banner', () => {
-  
-  // Arrange
-  render(<App />);
 
-  // Act 
-  // ...nothing
 
-  // Assert
-  const tempBanner = screen.getByText('Temp Banner X');
-  expect(tempBanner).toBeInTheDocument();
+describe('App component', () => {
+  test('renders the top banner with that includes "JSON Placeholder Demo App - Nick Regoli" as text', () => {
+    render(<App />);
+
+    const topBanner = screen.getByText('JSON Placeholder Demo App - Nick Regoli');
+    expect(topBanner).toBeInTheDocument();
+  })
+
+
+  test('renders an img element with className "dozuki-logo"', async () => {
+    render(<App />)
+    const element = screen.getByRole('img')
+    expect(element.className).toEqual('dozuki-logo')
+  })
 })
-
-
-// describe('Simple working test', () => {
-//   it('the title is visible', () => {
-//     render(<App />)
-//     expect(screen.getByText(/Temp Banner X/i)).toBeInTheDocument()
-//   })
-
-  // it('should increment count on click', async () => {
-  //   render(<App />)
-  //   userEvent.click(screen.getByRole('button'))
-  //   expect(await screen.findByText(/count is: 1/i)).toBeInTheDocument()
-  // })
-
-  // it('uses flexbox in app header', async () => {
-  //   render(<App />)
-  //   const element = screen.getByRole('banner')
-  //   expect(element.className).toEqual('App-header')
-  //   expect(getComputedStyle(element).display).toEqual('flex')
-  // })
-// })

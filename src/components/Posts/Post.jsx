@@ -7,7 +7,7 @@ import usePost from "../../hooks/usePost";
 import "./Post.css";
 
 const Post = ({ postId, setPostId }) => {
-  const { status, data, error, isFetching } = usePost(postId);
+  const { status, data, error } = usePost(postId);
 
   return (
     <div className="post-container">
@@ -19,7 +19,7 @@ const Post = ({ postId, setPostId }) => {
         <>
           <div className="post-title">Post Title: {data.title}</div>
           <User userId={data.userId} />
-          <div>
+          <div className="post-body">
             <p>
               <b>Post Body:</b> {data.body}
             </p>

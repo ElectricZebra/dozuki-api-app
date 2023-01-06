@@ -4,7 +4,7 @@ import useComments from "../../../hooks/useComments";
 import "./Comments.css";
 
 const Comments = ({ postId }) => {
-  const { status, data, error, isFetching } = useComments(postId);
+  const { status, data, error } = useComments(postId);
 
   return (
     <div className="comments__container">

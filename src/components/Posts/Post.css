@@ -25,6 +25,10 @@
   font-family: sans-serif;
 }
 
+.post-body {
+  width: 80%;
+}
+
 .page-back__container {
   margin: 30px;
 }
