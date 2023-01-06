@@ -1,6 +1,6 @@
-import App from './App'
-import { render, screen } from './utils/test-utils'
+import { render, screen } from './utils/test-utils';
 
+import App from './App';
 
 
 describe('App component', () => {
@@ -11,10 +11,15 @@ describe('App component', () => {
     expect(topBanner).toBeInTheDocument();
   })
 
-
-  test('renders an img element with className "dozuki-logo"', async () => {
+  test('renders an element with className "main"', () => {
     render(<App />)
     const element = screen.getByRole('img')
     expect(element.className).toEqual('dozuki-logo')
+  })
+
+  test('renders an img element with alt text "dozuki-logo"', () => {
+    render(<App />)
+    const dozukiImage = screen.getByRole('img')
+    expect(dozukiImage.alt).toContain("Dozuki Logo")
   })
 })
