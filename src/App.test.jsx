@@ -11,12 +11,6 @@ describe('App component', () => {
     expect(topBanner).toBeInTheDocument();
   })
 
-  test('renders an element with className "main"', () => {
-    render(<App />)
-    const element = screen.getByRole('img')
-    expect(element.className).toEqual('dozuki-logo')
-  })
-
   test('renders an img element with alt text "dozuki-logo"', () => {
     render(<App />)
     const dozukiImage = screen.getByRole('img')

@@ -14,9 +14,6 @@ const User = ({ userId, setPostId }) => {
   const users = queryClient.getQueryData(["users"]);
   const [user] = users ? users.filter(user => user.id == userId) : [{}];
 
-  console.log("userId == " + userId)
-  console.log("users == " + users)
-
   return (
     <div>
       <h1 className="section-header">Posts by: {user.name} - {data && data.length}</h1>
