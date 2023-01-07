@@ -1,21 +1,20 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { render, screen, waitFor } from "@testing-library/react";
 
-import Posts from "./Posts";
+import Post from "./Post";
 
-describe("Posts component", () => {
-  test("renders 100 post links if request succeeds", async () => {
+describe("Post component", () => {
+  test("renders single post to have a 'Back' button link request succeeds", async () => {
     const queryClient = new QueryClient();
     const posts = render(
       <QueryClientProvider client={queryClient}>
-        <Posts />;
+        <Post />;
       </QueryClientProvider>
     );
 
     await waitFor(() => screen.getAllByRole("link"));
 
-    // expect(component.getByText('All Posts')).toBeInTheDocument()
-    expect(posts.getAllByRole("link")).toHaveLength(100);
+    expect(posts.getAllByRole("link")).toHaveLength(1);
   });
 
 
