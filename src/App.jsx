@@ -15,10 +15,11 @@ function App() {
   const [userId, setUserId] = useState(-1);
   const [postId, setPostId] = useState(-1);
 
+  
   const returnHomeHandler = () => {
     setPostId(-1);
     setUserId(-1);
-  }
+  };
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -43,4 +44,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
