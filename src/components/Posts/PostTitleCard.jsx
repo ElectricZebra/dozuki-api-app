@@ -19,7 +19,7 @@ const PostTitleCard = ({ setPostId, post }) => {
     >
       <Card>
         <h3>{post.title}</h3>
-        <h6>By: { user && user.name }</h6>
+        <h6>By: { user?.name }</h6>
       </Card>
     </a>
   );
