@@ -13,8 +13,6 @@ describe("Posts component", () => {
     );
 
     await waitFor(() => screen.getAllByRole("link"));
-
-    // expect(component.getByText('All Posts')).toBeInTheDocument()
     expect(posts.getAllByRole("link")).toHaveLength(100);
   });
 
