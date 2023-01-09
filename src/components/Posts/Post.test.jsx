@@ -11,7 +11,6 @@ describe("Post component", () => {
         <Post />;
       </QueryClientProvider>
     );
-    console.log("link =======" + post.getAllByRole("link"));
     expect(post.getAllByRole("link")).toHaveLength(1);
   });
 
